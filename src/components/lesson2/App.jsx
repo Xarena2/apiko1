@@ -17,12 +17,9 @@ const App = () => {
     <div>
       {post.map((p) => {
         return (
-          
           <div>
             <h2>{p.title}</h2>
             <p>{p.body}</p>
-            <p>{p.userId}</p>
-            <p>{p.id}</p>
           </div>
         );
       })}
