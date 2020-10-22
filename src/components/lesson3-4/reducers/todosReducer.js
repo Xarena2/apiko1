@@ -4,9 +4,7 @@ import { todosActions } from "../actions/todosActions";
 export const initialState = () => {
   const todosFromStorage = localStorage.getItem("todos");
   const todoParse = JSON.parse(todosFromStorage);
-  console.log("initialState: ", todosFromStorage);
-  console.log("initialState: ", todoParse);
-  return [];
+  return todoParse || [];
 };
 
 export const todosReducer = (todos, action) => {
@@ -21,10 +19,9 @@ export const todosReducer = (todos, action) => {
         }
       ];
     case todosActions.COMPLETE:
-      todos.map((todo) =>
+      return todos.map((todo) =>
         action._id === todo._id ? { ...todo, completed: !todo.completed } : todo
       );
-      break;
     case todosActions.REMOVE:
       return todos.filter((todo) => action._id !== todo._id);
     default:
