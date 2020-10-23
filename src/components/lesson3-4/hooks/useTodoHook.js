@@ -22,6 +22,11 @@ export const useTodosHook = () => {
       _id,
       type: todosActions.REMOVE
     });
+  
+  const onEdit = newTodo => dispatch({
+    newTodo,
+    type: todosActions.EDIT
+  })
 
   useEffect(() => {
     const todosStringified = JSON.stringify(todos);
@@ -32,6 +37,7 @@ export const useTodosHook = () => {
     todos,
     onAdd,
     onSwitch,
-    onRemove
+    onRemove,
+    onEdit
   };
 };

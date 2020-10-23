@@ -1,5 +1,6 @@
 export const todosActions = {
   ADD: "add",
   COMPLETE: "complete",
-  REMOVE: "remove"
+  REMOVE: "remove",
+  EDIT: "edit"
 };

@@ -6,7 +6,7 @@ import { ToDoItem } from "/src/components/lesson3-4/ToDoItem";
 import { useTodosHook } from "./hooks/useTodoHook";
 
 const App = () => {
-  const { todos, onAdd, onSwitch, onRemove } = useTodosHook();
+  const { todos, onAdd, onEdit, onSwitch, onRemove } = useTodosHook();
 
   return (
     <Fragment>
@@ -20,6 +20,7 @@ const App = () => {
               {...{ todo }}
               onSwitch={onSwitch}
               onRemove={onRemove}
+             onEdit={onEdit}
             />
           ))}
         </div>

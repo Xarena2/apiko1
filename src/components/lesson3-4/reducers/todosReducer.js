@@ -8,22 +8,25 @@ export const initialState = () => {
 };
 
 export const todosReducer = (todos, action) => {
-  switch (action.type) {
+  const { type, text, _id, newTodo } = action;
+  switch (type) {
     case todosActions.ADD:
       return [
         ...todos,
         {
           _id: uuidv4(),
-          text: action.text,
+          text,
           completed: false
         }
       ];
     case todosActions.COMPLETE:
       return todos.map((todo) =>
-        action._id === todo._id ? { ...todo, completed: !todo.completed } : todo
+        _id === todo._id ? { ...todo, completed: !todo.completed } : todo
       );
     case todosActions.REMOVE:
-      return todos.filter((todo) => action._id !== todo._id);
+      return todos.filter((todo) => _id !== todo._id);
+    case todosActions.EDIT:
+      return todos.map((todo) => (todo._id === newTodo._id ? newTodo : todo));
     default:
       break;
   }
