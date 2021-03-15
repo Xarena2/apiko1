@@ -16,7 +16,10 @@
   text-align: center;
   padding: 10px;
 }
-
+#root {
+  display: flex;
+  flex-direction: row;
+}
 .text {
   font-weight: bold;
   color: rbga(0, 0, 0, 0.6);
@@ -34,4 +37,72 @@
   display: flex;
   flex-direction: column;
   width: 80%;
+}
+.r2d12 {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.r2d15 {
+  background: purple;
+  width: 300px;
+  padding-left: 0;
+  margin-left: 0;
+}
+.r2d2,
+.r2d3 {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  border: 1px solid black;
+  margin-bottom: 5px;
+}
+.r2d1 {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  border: 3px solid red;
+  margin-bottom: 5px;
+}
+.r2d13 {
+  margin-right: 3px;
+  background: turquoise;
+}
+li::marker {
+  content: "";
+}
+.r2d11 {
+  display: flex;
+  flex-direction: row;
+  background: turquoise;
+  margin-right: 10px;
+}
+.r2d21,
+.r2d22,
+.r2d23 {
+  width: 400px;
+  border-radius: 15px;
+  height: 100%;
+  margin: 15px;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid black;
+}
+.r2d21 {
+  background: yellow;
+}
+.r2d22 {
+  background: yellowgreen;
+}
+.r2d23 {
+  background: sandybrown;
+}
+input {
+  text-decoration-color: #000000;
+  opacity: 0.2;
+  border-radius: 7px;
 }
