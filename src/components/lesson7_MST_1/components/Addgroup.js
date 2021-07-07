@@ -12,7 +12,7 @@ const Form = (props) => {
     if (query !== "") {
       gr.add(query);
     } else {
-      return;
+      return setQuery("");
     }
     alert(query);
     setQuery("");
@@ -31,11 +31,12 @@ const Form = (props) => {
         <input
           type="text"
           placeholder="Add..."
+          {...{query}}
           onChange={onchange}
           // value={query}
           // onKeyPress={onkeypress}
         />
-        <input type="submit" value="add" />
+        {/* <input type="submit" value="add" /> */}
       </form>
     </div>
   );
